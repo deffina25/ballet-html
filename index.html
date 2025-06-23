@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ballet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="./js/banner.js"></script>
+  <script src="./js/events.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/language.js"></script>
+  <script src="./js/scroll.js"></script>
+
+</head>
+<body>
+
+<!--Donate-->
+<section
+  class="font-work fixed top-[17.5rem] right-[-42px] z-50 flex h-[3rem] w-[8.25rem] -rotate-90 cursor-pointer items-center justify-center bg-gradient-to-b from-[#0057B8] from-[49.51%] to-[#FFD700] to-[49.52%] text-center text-base font-black tracking-[0.063rem] transition-all duration-400 hover:opacity-[0.7]">
+      <span class="uppercase [text-shadow:-1px_-1px_0_#000,1px_-1px_0_#000,-1px_1px_0_#000,1px_1px_0_#000]">
+        Donate
+      </span>
+</section>
+<!--Donate-->
+
+<!--Header-->
+<header class="fixed top-0 right-0 left-0 z-50 bg-[#111117]">
+  <div class="gradient-border-bottom">
+    <div class="container mx-auto max-w-[1202px] px-4">
+      <div class="flex h-[52px] items-center justify-between">
+        <a href="/" class="transition-all duration-400 hover:opacity-[0.7]">
+          <img src="./public/logo.svg" alt="Logo">
+        </a>
+
+        <!-- desktop -->
+        <div class="hidden min-[940px]:block">
+          <div class="w-full">
+            <ul
+              class="font-work flex items-center gap-x-[14px] text-[0.938rem] font-light tracking-[0.188rem] uppercase">
+              <li
+                class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/" class="color-[#FFFEFE]">Home</a>
+              </li>
+              <li
+                class="relative ab border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <div class="click-menu flex cursor-pointer items-center gap-x-[5px]">
+                  <span>About</span>
+                  <span class="arrow-menu transition-transform duration-300">
+                    <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                  </span>
+                </div>
+                <div
+                  style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                  class="hidden submenu absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2 z-50 flex-col bg-black">
+                  <a href=""
+                     style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                     class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                    n'ERA
+                  </a>
+                  <a href="#"
+                     class="py-1 flex min-h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                    Vladislav & Veronika
+                  </a>
+                </div>
+              </li>
+
+              <li
+                class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/productions" class="color-[#FFFEFE]">Productions</a>
+              </li>
+              <li
+                class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/events" class="color-[#FFFEFE]">Events</a>
+              </li>
+              <li
+                class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/news" class="color-[#FFFEFE]">News</a>
+              </li>
+              <li
+                class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/contact" class="color-[#FFFEFE]">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- mobile Button -->
+        <button class="flex h-8 w-8 flex-col items-center justify-center min-[940px]:hidden" aria-label="Toggle menu">
+          <span class="h-0.5 w-6 bg-white transition-all duration-300"></span>
+          <span class="my-1.5 h-0.5 w-6 bg-white transition-all duration-300"></span>
+          <span class="h-0.5 w-6 bg-white transition-all duration-300"></span>
+        </button>
+
+        <!-- mobile menu -->
+        <div
+          class="fixed top-[52px] left-0 h-[calc(100vh-52px)] w-full transform bg-[#111117] transition-transform duration-300 ease-in-out min-[940px]:hidden translate-x-full">
+          <div class="p-4">
+            <div class="w-full">
+              <ul
+                class="font-work flex flex-col items-start gap-y-2 text-[0.938rem] font-light tracking-[0.188rem] uppercase">
+                <li
+                  class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                  <a href="/" class="color-[#FFFEFE]">Home</a>
+                </li>
+                <li class="relative py-4">
+                  <div class="flex cursor-pointer items-center gap-x-[5px]">
+                    <span>Artists</span>
+                    <span class="transition-transform duration-300">
+                      <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                  </span>
+                  </div>
+                  <div
+                    style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                    class="submenu hidden mt-4 w-full z-50 flex-col bg-black">
+                    <a href=""
+                       style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                       class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                      n'ERA
+                    </a>
+                    <a href=""
+                       class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                      Vladislav & Veronika
+                    </a>
+                  </div>
+                </li>
+
+
+                <li
+                  class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                  <a href="/productions" class="color-[#FFFEFE]">Productions</a>
+                </li>
+                <li
+                  class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                  <a href="/events" class="color-[#FFFEFE]">Events</a>
+                </li>
+                <li
+                  class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                  <a href="/news" class="color-[#FFFEFE]">News</a>
+                </li>
+                <li
+                  class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                  <a href="/contact" class="color-[#FFFEFE]">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--  header right -->
+        <div class="flex items-center gap-x-2">
+          <a href="#subscribe"
+             class="smooth-scroll scroll-link font-work mr-6 flex h-8 w-[7.375rem] items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
+            <span>subscribe</span>
+          </a>
+          <div class="language-selector">
+            <div class="language-selector relative mr-[10px]">
+              <div
+                class="language-trigger flex cursor-pointer items-center gap-x-[5px] text-sm font-light tracking-[2px]">
+                <span class="current-lang">EN</span>
+                <span class="lang-arrow transition-transform duration-300">
+                  <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                </span>
+              </div>
+              <div
+                class="language-dropdown hidden absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2 flex-col bg-black"
+                style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;">
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="UA">
+                  UA
+                </div>
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="NL">
+                  NL
+                </div>
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="EN">
+                  EN
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="transition-all duration-400 hover:opacity-[0.7]">
+            <img src="./public/i.svg" alt="Instagram">
+          </a>
+          <a href="#" class="transition-all duration-400 hover:opacity-[0.7]">
+            <img src="./public/f.svg" alt="Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Header end-->
+
+<main class="mt-[52px] w-full">
+  <!--Banner-->
+  <section class="relative h-[36.75rem]">
+    <img
+      src="./public/banner.jpg"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+    >
+    <div class="relative top-[22px] container mx-auto max-w-[1202px] px-4">
+      <button
+        id="banner-toggle-btn"
+        class="transaction-all absolute top-0 right-4 z-10 cursor-pointer duration-400 hover:opacity-[0.5]"
+      >
+        <img id="banner-btn-icon" src="./public/stop.svg" alt="Stop/Play">
+      </button>
+    </div>
+  </section>
+  <!--Banner end-->
+
+  <!--About-->
+  <section class="relative mx-auto h-full max-w-[90rem] xl:min-h-[904px]">
+    <section class="container mx-auto grid max-w-[75.125rem] px-4 py-10 xl:pt-[14.063rem] xl:pb-[194px]">
+      <article class="w-full xl:w-[570px]">
+        <h2
+          class="font-playfair text-[30px] leading-normal font-bold tracking-[0.125rem] md:text-[4.875rem] md:leading-[6.875rem]">
+          ABOUT n’ERA
+        </h2>
+        <div class="mt-5 text-base leading-[110.00000000000001%] font-normal md:mt-[45px]">
+          <p>
+            n’Era was originally founded by Vladyslav Detiuchenko in 2016 in
+            Ukraine, with the core mission of presenting Ukrainian
+            contemporary dance on the global stage. After the war began, n’Era
+            found a new home in The Hague, the Netherlands, where it can now
+            continue fulfilling its mission. n’Era Dance Productions is
+            dedicated to supporting and promoting Ukrainian contemporary dance
+            and art. Based in The Hague, Netherlands, we create performances
+            that explore universal themes such as solidarity, resilience,
+            peace, and human relationships. Through movement, we strive to
+            foster cultural dialogue and inspire change, using dance as a
+            powerful universal language that unites people and amplifies
+            voices that must be heard.
+          </p>
+          <p>
+            By engaging with a global audience, we aim to contribute to the
+            creation of a more inclusive and empathetic society, where dance
+            becomes a catalyst for reflection, inspiration, and hope.
+          </p>
+        </div>
+
+        <button
+          type="submit"
+          class="mt-[29px] flex w-[8.313rem] cursor-pointer items-center justify-between border-1 border-white py-[0.438rem] pr-4 pl-[0.625rem] uppercase transition-all duration-400 hover:opacity-[0.5]"
+        >
+          <span>More</span>
+          <img src="./public/right.svg" alt="">
+        </button>
+      </article>
+    </section>
+    <article class="t-4 right-0 flex xl:absolute xl:top-[11.188rem]">
+      <div class="relative hidden h-full w-full xl:block">
+        <img
+          class="z-10 h-[568px] w-[505px]"
+          src="./public/about1.jpg"
+          alt="Vladyslav Detiuchenko and Veronika Rakitina"
+        />
+        <img
+          class="top-[16.875rem] right-[15.938rem] z-20 h-[370px] w-[370px] xl:absolute"
+          src="./public/about2.jpg"
+          alt="Vladyslav Detiuchenko and Veronika Rakitina"
+        />
+      </div>
+    </article>
+  </section>
+  <!--About end-->
+
+  <!--Users-->
+  <section
+    class="container mx-auto grid min-h-[934px] max-w-[1202px] grid-cols-1 justify-between px-4 pt-[62px] pb-[71px] md:pb-[138px] xl:grid-cols-2">
+    <article class="mt-0 text-center md:mt-[74px]">
+      <img
+        src="./public/vladislay-veronika.jpg"
+        alt="Vladyslav Detiuchenko and Veronika Rakitina"
+      />
+    </article>
+    <article>
+      <h2
+        class="font-playfair mt-[10px] text-center text-[30px] leading-normal font-bold tracking-[0.125rem] uppercase md:mt-0 md:text-[4.875rem] md:leading-[87px] xl:text-right">
+        Vladyslav
+        <span class="text-5 font-semibold tracking-[0.125rem] md:text-[4.875rem]">
+            &
+          </span>
+        veronika
+      </h2>
+
+      <div
+        class="mt-[20px] w-full text-center text-base leading-normal font-normal md:mt-[4.563rem] md:text-left md:leading-[110.00000000000001%] xl:max-w-[469px]">
+        <p>
+          Vladyslav Detiuchenko and Veronika Rakitina are dancers,
+          choreographers, and artistic directors of n’Era Dance Productions.
+        </p>
+        <br/>
+        <p>
+          The full-scale Russian invasion of Ukraine in 2022 drastically
+          changed their artistic path. Forced to leave their homeland, they
+          moved to the Netherlands, where from 2022 to 2024 they worked as
+          dancers—and Vladyslav also as a choreographer—with the United
+          Ukrainian Ballet, which supported their initiatives and became a
+          platform for their growth. Over time, they discovered a strong
+          creative connection and a shared need to collaborate in order to
+          bring bold and profound ideas to life.
+        </p>
+        <br/>
+        <p>
+          Since 2023, they have been working as an artistic duo: they jointly
+          develop the concepts of their works, with Vladyslav creating the
+          choreography and Veronika supporting him and managing the production
+          design. They have collaborated with well-known production companies
+          such as Senf Production, Korzo, and Magnezy Dance Productions. Their
+          dance films have been screened at Nederlands Dansdagen and Cinedans
+          in the Netherlands, as well as in the USA, Croatia, Australia, and
+          Ukraine.
+        </p>
+      </div>
+
+      <button
+        type="submit"
+        class="mt-[1.938rem] flex w-[8.313rem] cursor-pointer items-center justify-between border-1 border-white py-[0.438rem] pr-4 pl-[0.625rem] uppercase transition-all duration-400 hover:opacity-[0.5]"
+      >
+        <span>More</span>
+        <img src="./public/right.svg" alt="">
+      </button>
+    </article>
+  </section>
+  <!--Users end-->
+
+  <!--Slider-->
+  <section class="embla">
+    <div class="embla__viewport">
+      <div class="embla__container">
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide1.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 1">
+          </div>
+        </div>
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide2.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 2">
+          </div>
+        </div>
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide3.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 3">
+          </div>
+        </div>
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide1.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 1">
+          </div>
+        </div>
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide2.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 2">
+          </div>
+        </div>
+        <div class="embla__slide">
+          <div class="embla__slide__img">
+            <img src="./public/slider/slide3.jpg" width="570px" height="570px" class="h-full w-full" alt="Slide 3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="embla__controls">
+      <div class="embla__buttons">
+        <button
+          class="embla__button embla__button--prev"
+          type="button"
+        >
+          <img src="./public/left-slider.svg" alt="prev slide" width="10px" height="6px">
+        </button>
+
+        <button
+          class="embla__button embla__button--next"
+          type="button"
+        >
+          <img src="./public/right-slider.svg" width="10px" height="6px" alt="next slide">
+        </button>
+      </div>
+    </div>
+  </section>
+  <!--Slider end-->
+
+  <!--Events-->
+  <section style="background: linear-gradient(180deg, rgba(17, 17, 23, 0) 60.96%, #1C1C25 100%)">
+    <div class="relative container mx-auto min-h-[730px] max-w-[1202px] overflow-hidden px-4 pt-[86px] pb-[5.813rem]">
+      <h2
+        class="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] xl:text-left">
+        Events
+      </h2>
+      <div class="mt-[45px] h-[650px] overflow-hidden xl:h-[365px]">
+        <div id="eventsContainer">
+          <article
+            class="grid auto-rows-auto grid-cols-[20%_1fr] items-center gap-[30px] py-7 xl:grid-cols-[170px_auto_370px] [&>*:last-child]:col-span-2 xl:[&>*:last-child]:col-span-1">
+            <div class="text-center">
+              <p class="font-playfair text-7xl leading-[40%] font-bold tracking-[2px] md:text-8xl">27</p>
+              <p class="mt-[50px] text-[32px] leading-[40%] font-light tracking-[2px]">OCT</p>
+            </div>
+            <div class="border-l-1 border-white pb-[10px] pl-[15px]">
+              <h6 class="text-e line-clamp-1 text-3xl font-semibold tracking-[2px] uppercase md:text-4xl">
+                My Orpheus
+              </h6>
+              <div
+                class="mt-[25px] text-base leading-normal font-light xl:leading-[40%] [&>p]:mb-[1rem] [&>p]:last:mb-0">
+                <p>4:00 PM</p>
+                <p class="uppercase">Kristiansund</p>
+                <p class="uppercase">Møre og Romsdal, Norway</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-x-[30px] xl:justify-between">
+              <a href="#"
+                 class="font-work flex h-[48px] w-[170px] items-center justify-center border-1 border-white p-[0.313rem] text-sm font-black text-white uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>read more</span>
+              </a>
+              <button
+                class="font-work flex h-[48px] w-[170px] cursor-pointer items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>tickets</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="grid auto-rows-auto grid-cols-[20%_1fr] items-center gap-[30px] py-7 xl:grid-cols-[170px_auto_370px] [&>*:last-child]:col-span-2 xl:[&>*:last-child]:col-span-1">
+            <div class="text-center">
+              <p class="font-playfair text-7xl leading-[40%] font-bold tracking-[2px] md:text-8xl">02</p>
+              <p class="mt-[50px] text-[32px] leading-[40%] font-light tracking-[2px]">NOV</p>
+            </div>
+            <div class="border-l-1 border-white pb-[10px] pl-[15px]">
+              <h6 class="text-e line-clamp-1 text-3xl font-semibold tracking-[2px] uppercase md:text-4xl">
+                My Orpheus
+              </h6>
+              <div
+                class="mt-[25px] text-base leading-normal font-light xl:leading-[40%] [&>p]:mb-[1rem] [&>p]:last:mb-0">
+                <p>4:00 PM 5:00 PM</p>
+                <p class="uppercase">Korzo Theater</p>
+                <p class="uppercase">42 PrinsestraatDen Haag, ZH, 2513 CE, Netherlands</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-x-[30px] xl:justify-between">
+              <a href="#"
+                 class="font-work flex h-[48px] w-[170px] items-center justify-center border-1 border-white p-[0.313rem] text-sm font-black text-white uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>read more</span>
+              </a>
+              <button
+                class="font-work flex h-[48px] w-[170px] cursor-pointer items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>tickets</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="grid auto-rows-auto grid-cols-[20%_1fr] items-center gap-[30px] py-7 xl:grid-cols-[170px_auto_370px] [&>*:last-child]:col-span-2 xl:[&>*:last-child]:col-span-1">
+            <div class="text-center">
+              <p class="font-playfair text-7xl leading-[40%] font-bold tracking-[2px] md:text-8xl">14</p>
+              <p class="mt-[50px] text-[32px] leading-[40%] font-light tracking-[2px]">OCT</p>
+            </div>
+            <div class="border-l-1 border-white pb-[10px] pl-[15px]">
+              <h6 class="text-e line-clamp-1 text-3xl font-semibold tracking-[2px] uppercase md:text-4xl">
+                My Orpheus
+              </h6>
+              <div
+                class="mt-[25px] text-base leading-normal font-light xl:leading-[40%] [&>p]:mb-[1rem] [&>p]:last:mb-0">
+                <p>4:00 PM</p>
+                <p class="uppercase">Kristiansund</p>
+                <p class="uppercase">Møre og Romsdal, Norway</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-x-[30px] xl:justify-between">
+              <a href="#"
+                 class="font-work flex h-[48px] w-[170px] items-center justify-center border-1 border-white p-[0.313rem] text-sm font-black text-white uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>read more</span>
+              </a>
+              <button
+                class="font-work flex h-[48px] w-[170px] cursor-pointer items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>tickets</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="grid auto-rows-auto grid-cols-[20%_1fr] items-center gap-[30px] py-7 xl:grid-cols-[170px_auto_370px] [&>*:last-child]:col-span-2 xl:[&>*:last-child]:col-span-1">
+            <div class="text-center">
+              <p class="font-playfair text-7xl leading-[40%] font-bold tracking-[2px] md:text-8xl">26</p>
+              <p class="mt-[50px] text-[32px] leading-[40%] font-light tracking-[2px]">NOV</p>
+            </div>
+            <div class="border-l-1 border-white pb-[10px] pl-[15px]">
+              <h6 class="text-e line-clamp-1 text-3xl font-semibold tracking-[2px] uppercase md:text-4xl">
+                My Orpheus
+              </h6>
+              <div
+                class="mt-[25px] text-base leading-normal font-light xl:leading-[40%] [&>p]:mb-[1rem] [&>p]:last:mb-0">
+                <p>4:00 PM 5:00 PM</p>
+                <p class="uppercase">Korzo Theater</p>
+                <p class="uppercase">42 PrinsestraatDen Haag, ZH, 2513 CE, Netherlands</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-x-[30px] xl:justify-between">
+              <a href="#"
+                 class="font-work flex h-[48px] w-[170px] items-center justify-center border-1 border-white p-[0.313rem] text-sm font-black text-white uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>read more</span>
+              </a>
+              <button
+                class="font-work flex h-[48px] w-[170px] cursor-pointer items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
+                <span>tickets</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="absolute bottom-[10px] flex w-full flex-col items-center xl:bottom-[21px]">
+        <div class="flex flex-col items-center gap-y-[20px]">
+                    <span id="prevButton" class="transition-all duration-400 hover:opacity-[0.5] cursor-pointer">
+                        <img src="./public/top.svg" alt="Previous">
+                    </span>
+          <span id="nextButton" class="transition-all duration-400 hover:opacity-[0.5] cursor-pointer">
+                        <img src="./public/bottom.svg" alt="Next">
+                    </span>
+        </div>
+        <div class="mt-[5px] h-[24px]">
+          <a href="#" id="seeMoreLink"
+             class="text-[10px] font-light tracking-[2px] uppercase transition-opacity hover:opacity-70 hidden">
+            See more events
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Events end-->
+
+  <!--News-->
+  <section class="container mx-auto max-w-[1202px] px-4 pt-[6.375rem] pb-[5.813rem]">
+    <h2
+      class="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] xl:text-right">
+      News
+    </h2>
+    <div class="mt-[6.188rem]">
+      <div class="grid grid-cols-1 gap-[70px] md:grid-cols-2 lg:grid-cols-3 lg:gap-[1.875rem]">
+        <article>
+          <div class="h-[430px] border-t-slate-200 text-center">
+            <img src='./public/new1.png' alt="" class="inline-block"/>
+          </div>
+          <h5 class="mt-[1.625rem] text-2xl leading-[27px] font-semibold tracking-[2px] uppercase">
+            STAND BY ME and EXIT SIGN at Korzo Theater in The Hague
+          </h5>
+          <p class="mt-[4px] text-lg font-light">23/05/25</p>
+          <p class="mt-5 text-base leading-[110.00000000000001%]">In a thoughtfully curated double bill at The Hague’s
+            Korzo Theatre, two choreographers take us on parallel journeys through the inner and outer landscapes of
+            human
+            striving. Stand By Me by Ukrainian artist Vladyslav Detiuchenko and Exit Sign by Dutch house choreographer
+            Zino Schat are starkly different in tone and style but together they sketch a bleak yet compelling portrait
+            of
+            longing, ambition, and collapse.</p>
+          <button
+            type="submit"
+            class="mt-[20px] flex w-[8.313rem] cursor-pointer items-center justify-between border-1 border-white py-[0.438rem] pr-4 pl-[0.625rem] uppercase transition-all duration-400 hover:opacity-[0.5]"
+          >
+            <span>More</span>
+            <img src="./public/right.svg" alt="">
+          </button>
+        </article>
+
+        <article>
+          <div class="h-[430px] border-t-slate-200 text-center">
+            <img src='./public/new2.png' alt="" class="inline-block"/>
+          </div>
+          <h5 class="mt-[1.625rem] text-2xl leading-[27px] font-semibold tracking-[2px] uppercase">
+            LIGHT IN DARKNESS II at Korzo Theater in The Hague
+          </h5>
+          <p class="mt-[4px] text-lg font-light">02/03/25</p>
+          <p class="mt-5 text-base leading-[110.00000000000001%]">There could have been no more suitable location
+            for Light in Darkness II, a benefit concert for Ukraine, than the Korzo Theater, situated in the heart of
+            the
+            city of peace and international justice. Organised by Veronika Rakitina and her partner Vladyslav
+            Detiuchenko
+            it brought together a group of exiled Ukrainian, and other artists, who demonstrated the rich vein of talent
+            that is struggling for survival in their beleaguered country.</p>
+          <button
+            type="submit"
+            class="mt-[20px] flex w-[8.313rem] cursor-pointer items-center justify-between border-1 border-white py-[0.438rem] pr-4 pl-[0.625rem] uppercase transition-all duration-400 hover:opacity-[0.5]"
+          >
+            <span>More</span>
+            <img src="./public/right.svg" alt="">
+          </button>
+        </article>
+
+        <article>
+          <div class="h-[430px] border-t-slate-200 text-center">
+            <img src='./public/new3.png' alt="" class="inline-block"/>
+          </div>
+          <h5 class="mt-[1.625rem] text-2xl leading-[27px] font-semibold tracking-[2px] uppercase">
+            Vladyslav and Veronika Organize Second Charity Event for Ukraine
+          </h5>
+          <p class="mt-[4px] text-lg font-light">30/01/25</p>
+          <p class="mt-5 text-base leading-[110.00000000000001%]">Ukrainian choreographers and performers Vladyslav
+            Detiuchenko and Veronika Rakitina are organizing a second evening on Saturday, March 1st, at Korzo in The
+            Hague to raise money for the victims in Ukraine. Their mission is to draw attention to the brave fight for
+            independence and freedom in Ukraine with Light in Darkness II, while also raising funds to help those in
+            need.</p>
+          <button
+            type="submit"
+            class="mt-[20px] flex w-[8.313rem] cursor-pointer items-center justify-between border-1 border-white py-[0.438rem] pr-4 pl-[0.625rem] uppercase transition-all duration-400 hover:opacity-[0.5]"
+          >
+            <span>More</span>
+            <img src="./public/right.svg" alt="">
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!--News end-->
+
+  <!--Subscribe-->
+  <section
+    id="subscribe"
+    class="wrapper-subscribe relative flex h-[453px] items-center justify-center overflow-hidden py-4"
+  >
+    <div
+      class="absolute top-0 left-0 z-2 h-full w-full"
+      style="
+    background:
+    linear-gradient(90deg, rgba(255, 215, 0, 0.5) 0%, rgba(0, 87, 184, 0.5) 100%),
+    radial-gradient(32.06% 60.93% at 50% 43.71%, rgba(17, 17, 23, 0.3773) 0%, rgba(17, 17, 23, 0) 100%)
+    "
+    ></div>
+    <div class="z-3">
+      <h2
+        class="font-playfair text-center text-[3.275rem] leading-[40%] font-bold tracking-[0.125rem] uppercase md:text-[4.875rem]">
+        Subscribe
+      </h2>
+      <p class="mt-[40px] text-center">
+        And never miss out on our new events.
+      </p>
+      <form action="" class="mt-11 flex">
+        <label>
+          <input
+            style="box-shadow: 3px 4px 10px 0 #00000040"
+            placeholder="EMAIL"
+            class="h-[48px] w-[220px] bg-white px-[30px] text-base leading-[40%] font-normal text-[#363636] outline-none sm:w-[401px]"
+            type="email"
+          />
+        </label>
+        <button
+          type="submit"
+          style="box-shadow: -3px 0 6px 0 #0000001A"
+          class="font-work flex h-12 w-auto cursor-pointer items-center justify-center bg-[#FFD700] p-[1.313rem] text-base
+      font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7] md:w-[170px]"
+        >
+          subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+  <!--Subscribe end-->
+
+  <!--Partners-->
+  <section class="container mx-auto max-w-[1202px] px-4 py-5 text-center md:pt-[6.063rem] md:pb-[7.625rem]">
+    <h2 class="font-playfair text-[3.275rem] font-bold tracking-[0.125rem] uppercase md:text-[4.875rem]">
+      Partners
+    </h2>
+    <div class="mx-auto mt-2 md:mt-[3.313rem]">
+      <div class="flex max-w-[1110px] flex-wrap justify-center gap-0">
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p1.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p2.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p3.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p4.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p5.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p6.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p7.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p8.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p9.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p10.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+
+        <article class="h-[100px] w-[100px] md:h-[170px] md:w-[170px]">
+          <img
+            src="./public/partners/p11.png"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </article>
+      </div>
+    </div>
+  </section>
+  <!--Partners end-->
+
+  <!--Footer-->
+  <footer class="gradient-border-top">
+    <div class="container mx-auto max-w-[1202px] px-4 py-[2.875rem] md:pt-[5.625rem] md:pb-[27px]">
+      <div class="grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-16">
+        <div class="text-center md:text-left">
+          <a
+            href="/"
+            class="inline-block transition-all duration-400 hover:opacity-[0.5]"
+          >
+            <img src="./public/footer-logo.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="w-full text-center md:max-w-[568px] md:text-left">
+          <h3 class="font-playfair mb-[1.125rem] text-[32px] font-bold uppercase">
+            Contacts
+          </h3>
+          <div class="text-base font-normal">
+            <p class="mb-[0.563rem]">Stichting n’Era</p>
+            <p class="mb-[0.563rem]">
+              p/a Nassauplein 15, 2585EB, Den Haag, The Netherlands
+            </p>
+            <p class="mb-[0.563rem]">
+              <a
+                class="transition-all duration-400 hover:opacity-[0.5]"
+                href="tel:+31684683368"
+              >
+                +31684683368
+              </a>
+            </p>
+            <p class="mb-[0.563rem]">
+              <a
+                class="transition-all duration-400 hover:opacity-[0.5]"
+                href="mailto:stichtingnera@gmail.com"
+              >
+                stichtingnera@gmail.com
+              </a>
+            </p>
+            <p class="mb-[1.438rem]">KVK-nummer 96354348</p>
+          </div>
+
+          <div class="flex justify-center gap-x-3.5 md:justify-start">
+            <a
+              href="#"
+              class="transition-all duration-400 hover:opacity-[0.7]"
+            >
+              <img src="./public/i.svg" alt="Instagram" class="h-[40px] w-[40px] md:h-auto md:w-auto">
+            </a>
+            <a
+              href="#"
+              class="inline-block transition-all duration-400 hover:opacity-[0.7]"
+            >
+              <img src="./public/f.svg" alt="Facebook" class="h-[40px] w-[40px] md:h-auto md:w-auto">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[31px]">
+        <p class="font-work text-sm font-light">
+          2025 &copy; n'Era Dance Productions. All Rights Reserved. Website by
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--Footer end-->
+</main>
+
+</body>
+</html>
