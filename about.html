@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ballet</title>
+  <link rel="icon" type="image/svg+xml" href="./public/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="./js/banner.js"></script>
+  <script src="./js/events.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/language.js"></script>
+  <script src="./js/scroll.js"></script>
+
+</head>
+<body>
+
+<!--Donate-->
+<section
+  class="font-work fixed top-[17.5rem] right-[-42px] z-50 flex h-[3rem] w-[8.25rem] -rotate-90 cursor-pointer items-center justify-center bg-gradient-to-b from-[#0057B8] from-[49.51%] to-[#FFD700] to-[49.52%] text-center text-base font-black tracking-[0.063rem] transition-all duration-400 hover:opacity-[0.7]">
+      <span class="uppercase [text-shadow:-1px_-1px_0_#000,1px_-1px_0_#000,-1px_1px_0_#000,1px_1px_0_#000]">
+        Donate
+      </span>
+</section>
+<!--Donate-->
+
+<!--Header-->
+<header class="fixed top-0 right-0 left-0 z-50 bg-[#111117]">
+  <div class="gradient-border-bottom">
+    <div class="container mx-auto max-w-[1202px] px-4">
+      <div class="flex h-[52px] items-center justify-between gap-4 xl:gap-[70px]">
+        <a href="/" class="transition-all duration-400 hover:opacity-[0.7]">
+          <img src="./public/logo.svg" alt="Logo" width="45" height="32">
+        </a>
+
+        <!-- desktop -->
+        <div class="hidden w-full items-end justify-end text-right min-[1065px]:flex">
+          <ul
+            class="font-work flex items-end gap-x-[14px] text-[0.938rem] font-light tracking-[0.188rem] uppercase">
+            <li
+              class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <a href="index.html" class="color-[#FFFEFE]">Home</a>
+            </li>
+            <li
+              class="relative ab border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <div class="click-menu flex cursor-pointer items-center gap-x-[5px]">
+                <span>About</span>
+                <span class="arrow-menu transition-transform duration-300">
+                    <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                  </span>
+              </div>
+              <div
+                style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                class="min-w-[112px] hidden submenu absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2 z-50 flex-col bg-black">
+                <a href="/about.html"
+                   style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                   class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                  n'ERA
+                </a>
+                <a href="#"
+                   class="py-1 flex min-h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                  Vladislav & Veronika
+                </a>
+              </div>
+            </li>
+
+            <li
+              class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <a href="/productions" class="color-[#FFFEFE]">Productions</a>
+            </li>
+            <li
+              class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <a href="/events" class="color-[#FFFEFE]">Events</a>
+            </li>
+            <li
+              class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <a href="/news" class="color-[#FFFEFE]">News</a>
+            </li>
+            <li
+              class="border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+              <a href="/contact" class="color-[#FFFEFE]">Contact</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- mobile Button -->
+        <button
+          class="box-content flex h-8 w-8 cursor-pointer flex-col items-center justify-center p-[10px] min-[1065px]:hidden"
+          aria-label="Toggle menu">
+          <span class="h-0.5 w-6 bg-white transition-all duration-300"></span>
+          <span class="my-1.5 h-0.5 w-6 bg-white transition-all duration-300"></span>
+          <span class="h-0.5 w-6 bg-white transition-all duration-300"></span>
+        </button>
+        <!-- mobile menu -->
+        <div
+          class="fixed top-[52px] left-0 h-[calc(100vh-52px)] w-full transform bg-[#111117] transition-transform duration-300 ease-in-out min-[1065px]:hidden translate-x-full">
+          <div class="p-4">
+            <ul
+              class="font-work flex flex-col items-start gap-y-2 text-[0.938rem] font-light tracking-[0.188rem] uppercase">
+              <li
+                class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/" class="color-[#FFFEFE]">Home</a>
+              </li>
+              <li class="relative py-4">
+                <div class="flex cursor-pointer items-center gap-x-[5px]">
+                  <span>Artists</span>
+                  <span class="transition-transform duration-300">
+                      <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                  </span>
+                </div>
+                <div
+                  style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                  class="submenu hidden mt-4 w-full z-50 flex-col bg-black">
+                  <a href=""
+                     style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;"
+                     class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                    n'ERA
+                  </a>
+                  <a href=""
+                     class="flex h-[50px] cursor-pointer items-center justify-center px-[5px] text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10">
+                    Vladislav & Veronika
+                  </a>
+                </div>
+              </li>
+              <li
+                class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/productions" class="color-[#FFFEFE]">Productions</a>
+              </li>
+              <li
+                class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/events" class="color-[#FFFEFE]">Events</a>
+              </li>
+              <li
+                class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/news" class="color-[#FFFEFE]">News</a>
+              </li>
+              <li
+                class="py-4 border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]">
+                <a href="/contact" class="color-[#FFFEFE]">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  header right -->
+        <div class="flex items-center gap-x-[5px] sm:gap-x-2">
+          <a href="#subscribe"
+             class="font-work mt-0 flex h-8 w-[7.375rem] items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7] sm:mr-6">
+            <span>subscribe</span>
+          </a>
+          <div class="language-selector">
+            <div class="relative w-auto sm:w-[54px]">
+              <div
+                class="language-trigger flex cursor-pointer items-center gap-x-[5px] text-sm font-light tracking-[2px]">
+                <span class="current-lang">EN</span>
+                <span class="lang-arrow transition-transform duration-300">
+                  <img src="./public/language-str.svg" alt="expand" class="dropdown-arrow"/>
+                </span>
+              </div>
+              <div
+                class="language-dropdown hidden absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2 flex-col bg-black"
+                style="border: 1px solid transparent; border-image: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1;">
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="UA">
+                  UA
+                </div>
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="NL">
+                  NL
+                </div>
+                <div
+                  class="lang-option flex h-[50px] w-[54px] cursor-pointer items-center justify-center px-4 py-2 align-middle text-[15px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
+                  data-lang="EN">
+                  EN
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#"
+             class="flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7]">
+            <img src="./public/i.svg" alt="Instagram">
+          </a>
+          <a href="#"
+             class="ml-0 flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7] sm:ml-[6px]">
+            <img src="./public/f.svg" alt="Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Header end-->
+
+<main class="mt-[52px] w-full">
+  <!--Banner-->
+  <section class="relative h-[36.75rem]">
+    <img
+      src="./public/banner/about.jpg"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+    >
+  </section>
+  <!--Banner end-->
+
+  <!--About-->
+  <section class="relative mx-auto h-full max-w-[90rem] xl:min-h-[904px]">
+    <section class="container mx-auto grid max-w-[75.125rem] px-4 py-10 xl:pt-[14.063rem] xl:pb-[194px]">
+      <article class="w-full xl:w-[570px]">
+        <h2
+          class="font-playfair text-[30px] leading-normal font-bold tracking-[0.125rem] md:text-[4.875rem] md:leading-[6.875rem]">
+          ABOUT n’ERA
+        </h2>
+        <div class="mt-5 text-base leading-[110.00000000000001%] font-normal md:mt-[45px]">
+          <p>
+            n’Era was founded by Vladyslav Detiuchenko in 2016 in Ukraine, with the core mission of bringing Ukrainian
+            contemporary dance to the global stage. After the outbreak of the war, n’Era found a new home in The Hague,
+            Netherlands, where it continues to fulfill its mission under the leadership of Vladyslav Detiuchenko and
+            Veronika Rakitina.
+          </p>
+          <p>n’Era Dance Productions is a platform dedicated to supporting and promoting Ukrainian contemporary dance
+            and art. Based in the Netherlands, we create performances that explore universal themes such as solidarity,
+            resilience, peace, and human connection.</p>
+          <p>Through movement, we strive to foster cultural dialogue and inspire change — using dance as a powerful
+            universal language that unites people and amplifies voices that must be heard.</p>
+          <p>By engaging with international audiences, we aim to contribute to the creation of a more inclusive and
+            compassionate society, where dance becomes a catalyst for reflection, inspiration, and hope.</p>
+        </div>
+      </article>
+    </section>
+    <article class="t-4 right-0 flex xl:absolute xl:top-[11.188rem]">
+      <div class="relative hidden h-full w-full xl:block">
+        <img
+          class="z-10 h-[568px] w-[505px]"
+          src="./public/about3.jpg"
+          alt="Vladyslav Detiuchenko and Veronika Rakitina"
+        />
+        <img
+          class="top-[16.875rem] right-[15.938rem] z-20 h-[370px] w-[370px] xl:absolute"
+          src="./public/about4.jpg"
+          alt="Vladyslav Detiuchenko and Veronika Rakitina"
+        />
+      </div>
+    </article>
+  </section>
+  <!--About end-->
+
+  <!--Mission-->
+  <section
+    class="container mx-auto grid max-w-[1202px] grid-cols-1 gap-[30px] px-4 pt-[33px] pb-[40px] xl:grid-cols-[430px_1fr] xl:pb-[5.813rem]">
+    <article class="text-center xl:text-left">
+      <img
+        class="inline-block"
+        src="./public/about/mission.png"
+        width="470"
+        height="370"
+        alt=""
+      />
+    </article>
+    <article class="text-center xl:text-left">
+      <h2 class="font-playfair text-[30px] leading-[66px] font-bold tracking-[0.125rem] md:text-[4.875rem]">
+        MISSION:
+      </h2>
+
+      <div class="mt-5 text-base leading-[110.00000000000001%] font-normal md:mt-[45px]">
+        Stichting n’Era is dedicated to supporting and promoting Ukrainian
+        contemporary dance and art. Our dance works are created with the goal
+        of conveying global themes such as solidarity, peace, hope, and human
+        relationships, through pieces that become a universal language for
+        spreading these messages. We aim to provide Ukrainian contemporary
+        dancers and artists with a platform for self-expression and
+        international recognition, strengthening the significance of Ukrainian
+        art on the global stage.
+      </div>
+    </article>
+  </section>
+  <!--Mission end-->
+
+  <!--Goals-->
+  <section
+    class="container mx-auto grid max-w-[1202px] grid-cols-1 gap-[30px] px-4 pt-0 pb-[20px] xl:grid-cols-[1fr_569px] xl:pt-[53px] xl:pb-[115px]">
+    <article>
+      <h2
+        class="text-center text-[30px] leading-[63px] font-bold tracking-[0.125rem] md:text-[4.875rem] xl:text-left">
+        GOALS:
+      </h2>
+
+      <div
+        class="mt-5 text-base leading-[110.00000000000001%] font-normal md:mt-[45px] [&>ul]:list-disc [&>ul]:pl-[19px] [&>ul>li]:mb-[18px]">
+        <ul>
+          <li>
+            Support for Ukrainian culture and contemporary dance: Promote
+            Ukrainian culture and develop Ukrainian contemporary dance on the
+            international stage, providing a platform for Ukrainian artists to
+            express themselves
+          </li>
+          <li>
+            Increase awareness across the Netherlands and Europe that the war
+            in Ukraine is still ongoing by presenting productions that amplify
+            Ukrainian modern artists voices.
+          </li>
+          <li>
+            Build a bridge between Ukrainian and Dutch contemporary dance
+            artists through collaborations and cultural exchange
+          </li>
+          <li>
+            Reminder of key values through art: Create artistic works that
+            inspire solidarity, peace, and humanity.
+          </li>
+          <li>Organization of educational dance programs</li>
+        </ul>
+      </div>
+    </article>
+    <article class="text-center xl:text-right">
+      <img
+        src="./public/about/goals.png"
+        width="569"
+        height="493"
+        alt=""
+        class="inline-block"
+      />
+    </article>
+  </section>
+  <!--Goals end-->
+
+  <!--Board members-->
+  <section
+    class="container mx-auto grid min-h-[540px] max-w-[1202px] grid-cols-1 gap-4 px-4 py-[42px] xl:grid-cols-[570px_1fr] xl:gap-[130px]">
+    <article class="text-base leading-[110.00000000000001%] font-normal">
+      <h5 class="font-playfair mb-[15px] text-2xl leading-[40%] font-bold">
+        BOARD MEMBERS
+      </h5>
+      <h6 class="mb-[6px] font-bold">Direction</h6>
+      <p>Vladyslav Detiuchenko & Veronika Rakitina : artistic directors</p>
+      <br/>
+      <h6 class="mb-[6px] font-bold">Supervisory Board</h6>
+      <p>Andrew van Esch: Chairman</p>
+      <p>Anno Fekkes: Secretary</p>
+      <p>Wade Warren</p>
+      <p>Cameron Williamson</p>
+      <p>Brooklyn Simmons</p>
+    </article>
+    <article class="mt-[36px] transition-all duration-400">
+      <div>
+        <a
+          href="#"
+          class="mb-[20px] inline-block w-full transition-all duration-400 hover:opacity-[0.5]"
+        >
+          <div class="grid h-[50px] w-full grid-cols-[36px_1fr] items-center justify-start gap-x-[27px]">
+            <div>
+              <img src="/file.svg" alt=""/>
+            </div>
+            <div class="text-[18px] leading-[110%] font-bold">
+              Lorem ipsum
+            </div>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="mb-[20px] inline-block w-full transition-all duration-400 hover:opacity-[0.5]"
+        >
+          <div class="grid h-[50px] w-full grid-cols-[36px_1fr] items-center justify-start gap-x-[27px]">
+            <div>
+              <img src="/file.svg" alt=""/>
+            </div>
+            <div class="text-[18px] leading-[110%] font-bold">
+              Lorem ipsum
+            </div>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="mb-[20px] inline-block w-full transition-all duration-400 hover:opacity-[0.5]"
+        >
+          <div class="grid h-[50px] w-full grid-cols-[36px_1fr] items-center justify-start gap-x-[27px]">
+            <div>
+              <img src="/file.svg" alt=""/>
+            </div>
+            <div class="text-[18px] leading-[110%] font-bold">
+              Lorem ipsum
+            </div>
+          </div>
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="mb-0 inline-block w-full transition-all duration-400 hover:opacity-[0.5]"
+        >
+          <div class="grid h-[50px] w-full grid-cols-[36px_1fr] items-center justify-start gap-x-[27px]">
+            <div>
+              <img src="/file.svg" alt=""/>
+            </div>
+            <div class="text-[18px] leading-[110%] font-bold">
+              Lorem ipsum
+            </div>
+          </div>
+        </a>
+      </div>
+    </article>
+  </section>
+  <!--Board members end-->
+
+  <!--Footer-->
+  <footer class="gradient-border-top">
+    <div class="container mx-auto max-w-[1202px] px-4 py-[2.875rem] md:pt-[5.625rem] md:pb-[27px]">
+      <div class="grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-16">
+        <div class="text-center md:text-left">
+          <a
+            href="/"
+            class="inline-block transition-all duration-400 hover:opacity-[0.5]"
+          >
+            <img src="./public/footer-logo.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="w-full text-center md:max-w-[568px] md:text-left">
+          <h3 class="font-playfair mb-[1.125rem] text-[32px] font-bold uppercase">
+            Contacts
+          </h3>
+          <div class="text-base font-normal">
+            <p class="mb-[0.563rem]">Stichting n’Era</p>
+            <p class="mb-[0.563rem]">
+              p/a Nassauplein 15, 2585EB, Den Haag, The Netherlands
+            </p>
+            <p class="mb-[0.563rem]">
+              <a
+                class="transition-all duration-400 hover:opacity-[0.5]"
+                href="tel:+31684683368"
+              >
+                +31684683368
+              </a>
+            </p>
+            <p class="mb-[0.563rem]">
+              <a
+                class="transition-all duration-400 hover:opacity-[0.5]"
+                href="mailto:stichtingnera@gmail.com"
+              >
+                stichtingnera@gmail.com
+              </a>
+            </p>
+            <p class="mb-[1.438rem]">KVK-nummer 96354348</p>
+          </div>
+
+          <div class="flex justify-center gap-x-3.5 md:justify-start">
+            <a
+              href="#"
+              class="transition-all duration-400 hover:opacity-[0.7]"
+            >
+              <img src="./public/i.svg" alt="Instagram" class="h-[40px] w-[40px] md:h-auto md:w-auto">
+            </a>
+            <a
+              href="#"
+              class="inline-block transition-all duration-400 hover:opacity-[0.7]"
+            >
+              <img src="./public/f.svg" alt="Facebook" class="h-[40px] w-[40px] md:h-auto md:w-auto">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[31px]">
+        <p class="font-work text-sm font-light">
+          2025 &copy; n'Era Dance Productions. All Rights Reserved. Website by
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--Footer end-->
+</main>
+
+</body>
+</html>
